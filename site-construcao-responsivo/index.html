@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title> Gerador de orçamentos</title>
+</head>
+
+<body>
+    <header id="home">
+
+        <section id="sectionMobile">
+            <ul id="btnMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Nossas soluções</a></li>
+                <li><a href="#options">Projetos</a></li>
+                <li><a href="#options">Contato</a></li>
+            </ul>
+        </section>
+
+        <div class="navbar">
+            <img src="./assets/logo-principal.png" alt="Imagem Logotipo" class="img-logo">
+
+            <ul class="list-itens">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#solucoes">Nossas Soluções</a></li>
+                <li><a href="#options">Projetos</a></li>
+                <li><a href="#options">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="titles">
+            <h1>Experimente o luxo de viver em um espaço criado especialmente pra você</h1>
+
+            <button class="button-info"> Entre em contato </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="iten-services" id="serviços">
+            <h2> Por que escolher a nossa empresa para realizar sua obra? </h2>
+
+            <div class="infos-empresa">
+                <p>Porque aqui, construir vai muito além de levantar paredes — é entregar qualidade, confiança e
+                    compromisso do início ao fim.
+
+                    Ao longo dos últimos anos, executamos diversas obras de alto padrão, sempre com foco em excelência,
+                    planejamento estratégico e cuidado máximo em cada detalhe. Nosso time é formado por profissionais
+                    experientes, comprometidos em transformar projetos em realidade com precisão e acabamento impecável.
+                </p>
+
+                <img src="./assets/sobre-empresa.jpg" alt="Cozinha planejada de alto padrão">
+            </div>
+        </section>
+
+        <div class="planning-and-production">
+            <p class="planejament"> Planejamento & Produção</p>
+
+            <p>Estamos juntos com você do início ao fim do projeto</p>
+
+        </div>
+
+        <div class="carousel">
+            <section class="second-container">
+
+                <article class="processes">
+                    <img src="./assets/design.svg" alt="">
+
+                    <h3>01. Briefing</h3>
+
+                    <p>Apresentamos plantas detalhadas e imagens 3D realistas que transformam suas ideias em um ambiente
+                        completo, antes mesmo da obra começar</p>
+                </article>
+
+                <article class="processes">
+                    <img src="./assets/gerente.svg" alt="">
+
+                    <h3>02. revisão</h3>
+
+                    <p>Não encontrou o que imaginava? Adaptamos o projeto até que ele seja perfeito pra você</p>
+                </article>
+
+                <article class="processes">
+                    <img src="./assets/gerente.svg" alt="">
+
+                    <h3>03. entrega final</h3>
+
+                    <p>Receba um projeto completo com imagens 3D de alta qualidade e todas as informações técnicas para
+                        dar
+                        vida ao seu espaço.</p>
+                </article>
+
+                <article class="processes">
+                    <img src="./assets/luxo.svg" alt="">
+
+                    <h3>04. pós entrega</h3>
+
+                    <p>Conte conosco para tirar dúvidas, encontrar os melhores fornecedores e até mesmo acompanhar a
+                        execução da obra.</p>
+                </article>
+
+                <article class="processes">
+                    <img src="./assets/design.svg" alt="">
+
+                    <h3>05. execução</h3>
+
+                    <p>Acompanhamos de perto cada etapa da obra, garantindo que tudo saia exatamente como foi
+                        planejado no projeto.</p>
+                </article>
+
+                <article class="processes">
+                    <img src="./assets/gerente.svg" alt="">
+
+                    <h3>06. fornecedores</h3>
+
+                    <p>Indicamos parceiros de confiança para materiais e mão de obra, facilitando cada decisão ao
+                        longo da obra.</p>
+                </article>
+
+            </section>
+        </div>
+
+        <section class="arrows">
+            <button onclick="moveLeft()" class="esquerda" id="btnEsquerda" aria-label="Anterior"> <img
+                    src="assets/seta-esquerda.png" alt=""> </button>
+
+            <div class="dots" id="dots"></div>
+
+            <button onclick="moveRight()" class="direita" id="btnDireita" aria-label="Próximo"><img
+                    src="assets/seta-direita.png" alt=""></button>
+        </section>
+
+        <div class="linha-curva"></div>
+
+        <section class="soluctions" id="options">
+
+            <h4>Nossos Serviços</h4>
+
+            <div>
+                <article class="soluctions-itens">
+
+                    <img src="./assets/especialidade-consultoria.png" alt="Consultorias">
+
+
+                    <p class="Title">Consultorias</p>
+
+                    <p class="text"> Oferecemos consultoria especializada em diversas áreas da arquitetura, como
+                        acessibilidade, sustentabilidade e gestão de projetos. Conte com nossa expertise para tomar as
+                        melhores decisões.</p>
+
+                </article>
+
+                <article class="soluctions-itens">
+                    <img src="./assets/especialidade-gerenciamento.png" alt="Gerenciamento de Obras">
+
+                    <p class="Title">Gerenciamento de Obras</p>
+
+                    <p class="text">Crie o lar dos seus sonhos com projetos personalizados que combinam estilo e
+                        funcionalidade. Desde pequenas reformas até grandes construções, nossos arquitetos transformarão
+                        seu
+                        espaço em um refúgio aconchegante.</p>
+
+                </article>
+
+                <article class="soluctions-itens">
+                    <img src="./assets/especialidade-comercial.png" alt="Projetos Comerciais">
+
+                    <p class="Title">Projetos comerciais</p>
+
+                    <p class="text">Aumente a eficiência e a produtividade do seu negócio com projetos comerciais
+                        inteligentes e modernos. Desenvolvemos espaços que impulsionam a imagem da sua marca e otimizam
+                        a
+                        experiência dos seus clientes.</p>
+
+                </article>
+            </div>
+
+
+        </section>
+
+        <section class="container-contact">
+            <article class="infos-contact">
+                <h5> Contato</h5>
+
+                <div class="contact">
+                    <img src="./assets/envelope.svg" alt="">
+                    <p>E-mail: seuemail@email.com</p>
+                </div>
+
+                <div class="contact">
+                    <img src="./assets/phone-call.svg" alt="">
+                    <p>Telefone: (19) 99999-9999</p>
+                </div>
+
+                <div class="contact">
+                    <img src="./assets/maps-and-flags.svg" alt="">
+                    <p>Endereço: Centro, São Paulo</p>
+                </div>
+
+                <button class="button-info"> Ou Fale Conosco Pelo WhatsApp</button>
+            </article>
+
+            <article class="form">
+                <h5>Preencha o Formulário</h5>
+                <p>Nossa equipe entrará em contato para realizarmos um orçamento.</p>
+
+                <input class="orcament" type="text" placeholder="Digite seu Nome">
+                <input class="orcament" type="text" placeholder="Digite seu E-mail">
+                <input class="orcament" type="text" placeholder="Digite seu Telefone">
+
+                <button class="button-info">Solicitar Orçamento</button>
+            </article>
+        </section>
+
+        <section class="address">
+            <h6>Onde Estamos</h6>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236191.53645134237!2d-47.49459305034207!3d-22.335015592041646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c87057a4792fa3%3A0x2bf2ad63b481c2fe!2sAraras%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1762297259229!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <footer class="rodape">
+            <img src="./assets/logo-principal.png" alt="logo-Empresa">
+
+            <div class="links">
+                <h6>Links Rápidos</h6>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nossos projetos</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Nossas soluções</a></li>
+                </ul>
+            </div>
+
+            <div class="contato">
+                <h6>Contato</h6>
+
+                <p>📍 (19) 98765-4321</p>
+                <p>📞 contato@jscontrucoes.com.br</p>
+                <p>🕐 Seg-Sex: 8h-20h</p>
+            </div>
+
+        </footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
