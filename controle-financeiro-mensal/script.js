@@ -12,6 +12,7 @@ function valueSalary() {
     }
 }
 
+
 const btnCriar = document.querySelector("#create")
 
 btnCriar.addEventListener('click', () => {
