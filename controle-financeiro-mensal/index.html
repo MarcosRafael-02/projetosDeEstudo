@@ -15,26 +15,31 @@
 <body>
     <header class="hero-header">
         <div class="salary">
-            <h1>Salário</h1>
-            <input type="text" id="value" placeholder="Digite o valor do seu salário">
+            <h1>Valor sálario</h1>
+            <input type="number" id="value" placeholder="Digite o valor do seu salário">
             <button type="button" id="botaoAdd" onclick="valueSalary()"> + Adicionar</button>
         </div>
 
         <div>
+            <h1>Sálario</h1>
+            <p class="value-recebido"> </p>
+        </div>
+
+        <div>
             <h1>Planejado</h1>
-            <p> </p>
+            <p class="value-planejed"> </p>
         </div>
 
         <div>
             <h1>Saldo</h1>
-            <p> </p>
+            <p class="saldo-disponivel"> </p>
         </div>
 
-        <div>
-            <h3>Resumo do mês</h3>
-            <p>Total gasto: </p>
-            <p>Disponível: </p>
-        </div>
+        <!-- <div> -->
+        <!--     <h3>Resumo do mês</h3> -->
+        <!--     <p>Total gasto: </p> -->
+        <!--     <p>Disponível: </p> -->
+        <!-- </div> -->
 
     </header>
 
@@ -46,24 +51,8 @@
 
     </section>
 
-    <section class="hero-itens">
-       
-    </section>
-
     <section class="iten-created">
-        <div class="container-iten-created">
-            <h3>Mercado</h3>
-            <div class="planned-expense">
-                <p>Planejado</p>
-                <p>R$600</p>
 
-                <p>Gasto</p>
-                <p>R$ 0</p>
-            </div>
-            <div>
-                <button type="button" id="addExpense">Adicionar Gasto</button>
-            </div>
-        </div>
     </section>
 
 

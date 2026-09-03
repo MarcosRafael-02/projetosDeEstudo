@@ -1,28 +1,31 @@
-const botaoAdicionar = document.querySelector("#botaoAdd")
+const valueInput = document.querySelector("#value")
+const ValueRecebido = document.querySelector(".value-recebido")
+const valuePlanejedTotal = document.querySelector(".value-planejed")
+const saldoDisponivel = document.querySelector(".saldo-disponivel")
+
+function valueSalary() {
+    if (valueInput.value === "" || null) {
+        ValueRecebido.textContent = `R$00`
+    }
+    else {
+        ValueRecebido.textContent = `R$ ${valueInput.value},00`
+    }
+}
+
 const btnCriar = document.querySelector("#create")
 
 btnCriar.addEventListener('click', () => {
     newPopUp();
 });
 
+let totalPlanejado = 0
+
 function newPopUp() {
     const newDiv = document.createElement("div")
     newDiv.id = 'popup-overlay';
-    newDiv.style.position = 'fixed';
-    newDiv.style.top = '0';
-    newDiv.style.left = '0';
-    newDiv.style.width = '100%';
-    newDiv.style.height = '100%';
-    newDiv.style.background = 'rgba(0, 0, 0, 0.5)';
-    newDiv.style.display = 'flex';
-    newDiv.style.alignItems = 'center';
-    newDiv.style.justifyContent = 'center';
 
     const popup = document.createElement('div');
-    popup.style.background = '#fff';
-    popup.style.padding = '24px';
-    popup.style.borderRadius = '8px';
-    popup.style.width = '250px';
+    popup.id = "popup"
 
     const content = document.createElement("h3")
     content.textContent = "Novo Envelope"
@@ -33,11 +36,8 @@ function newPopUp() {
 
     const inputName = document.createElement("input")
     inputName.type = 'text';
-    inputName.placeholder = 'Descrição';
-    inputName.style.margin = "10px 0 10px"
-    inputName.style.borderRadius = "5px"
-    inputName.style.border = "1px solid black"
-    inputName.style.padding = "8px"
+    inputName.placeholder = 'Mercado';
+    inputName.id = "inputName"
 
     const valuePlanejed = document.createElement("p")
     valuePlanejed.textContent = "Valor Planejado"
@@ -45,34 +45,29 @@ function newPopUp() {
     const inputValue = document.createElement("input")
     inputValue.type = "number"
     inputValue.placeholder = 'Valor';
-    inputValue.style.margin = "10px 0 10px"
-    inputValue.style.borderRadius = "5px"
-    inputValue.style.border = "1px solid black"
-    inputValue.style.padding = "8px"
+    inputValue.id = "inputValue"
 
     const btnSave = document.createElement("button")
     btnSave.textContent = "Salvar"
-    btnSave.style.padding = "10px"
-    btnSave.style.border = "none"
-    btnSave.style.background = "transparent"
-    btnSave.style.backgroundColor = "#252d48"
-    btnSave.style.color = "white"
-    btnSave.style.borderRadius = "10px"
-    btnSave.style.fontWeight = "600"
+    btnSave.id = "saveButton"
+
 
     btnSave.addEventListener('click', () => {
 
         if (inputName.value === '' || null) {
             alert('Você não preencheu os valores necessarios')
-        }
-        
-        else {
-            const novoGasto = {
-                descricao: inputName.value,
-                valor: inputValue.value
-            }
 
-            console.log(novoGasto)
+        }
+
+        else {
+            totalPlanejado += Number(inputValue.value)
+            valuePlanejedTotal.textContent = `R$ ${totalPlanejado}`
+
+            const recebido = Number(valueInput.value) || 0;
+            const disponivel = recebido - totalPlanejado;
+            saldoDisponivel.textContent = `R$ ${disponivel}`;
+
+            popupCreated()
         }
 
         newDiv.remove();
@@ -81,14 +76,7 @@ function newPopUp() {
 
     const btnCancel = document.createElement("button")
     btnCancel.textContent = "Cancelar"
-    btnCancel.style.marginLeft = "10px"
-    btnCancel.style.border = "none"
-    btnCancel.style.background = "transparent"
-    btnCancel.style.backgroundColor = "#252d48"
-    btnCancel.style.padding = "10px"
-    btnCancel.style.color = "white"
-    btnCancel.style.borderRadius = "10px"
-    btnCancel.style.fontWeight = "600"
+    btnCancel.id = "btnCancel"
 
     popup.appendChild(content)
     popup.appendChild(paragraphName)
@@ -110,3 +98,45 @@ function newPopUp() {
         newDiv.remove();
     });
 };
+
+
+const sectionCard = document.querySelector(".iten-created")
+
+function popupCreated() {
+    const divCreated = document.createElement("div")
+    divCreated.id = "cardDiv"
+
+    const contentDiv = document.createElement("div")
+    contentDiv.id = "contentitens"
+
+    const title = document.createElement("h3")
+    title.textContent = inputName.value
+    title.style.marginBottom = "16px"
+
+    const planejed = document.createElement("p")
+    planejed.textContent = "Planejado"
+
+    const valuePlanejed = document.createElement("p")
+    valuePlanejed.textContent = `R$ ${inputValue.value}`
+
+    const nameGasto = document.createElement("p")
+    nameGasto.textContent = "Gasto"
+    nameGasto.style.marginTop = "12px"
+
+    const valueGasto = document.createElement("p")
+    valueGasto.textContent = "R$ 0"
+    valueGasto.style.marginBottom = "12px"
+
+    const btnAdcGasto = document.createElement("button")
+    btnAdcGasto.textContent = "Adicionar Gasto"
+    btnAdcGasto.id = "btnAdcGasto"
+
+    contentDiv.appendChild(title)
+    contentDiv.appendChild(planejed)
+    contentDiv.appendChild(valuePlanejed)
+    contentDiv.appendChild(nameGasto)
+    contentDiv.appendChild(valueGasto)
+    contentDiv.appendChild(btnAdcGasto)
+    divCreated.appendChild(contentDiv)
+    sectionCard.appendChild(divCreated)
+}

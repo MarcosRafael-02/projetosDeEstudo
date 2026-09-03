@@ -44,65 +44,76 @@ button:active {
     opacity: .6;
 }
 
-/* POP UP PARA A CRIAÇÃO DE UM NOVO ENVELOPE */
-.container-itens {
-    border: 2px solid #aaa;
-    border-radius: 10px;
-    width: max-content;
-    padding: 20px;
+.iten-created {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
 }
 
-.name-value {
-    margin: 20px 0;
+/* POPUP PRA CRIAR NOVO GASTO*/
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.name-value input {
+#popup {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+#inputName,
+#inputValue {
     margin: 10px 0 10px;
     border-radius: 5px;
     border: 1px solid black;
     padding: 8px;
+
 }
 
-#cancel {
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    color: #aaa;
-    font-size: 18px;
-    background-color: transparent;
-    margin-left: 20px;
-}
-
-/* CARD COM O ITEM CRIADO */
-.container-iten-created {
-    background-color: #1e293b;
-    width: max-content;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    visibility: hidden;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.container-iten-created button {
+#saveButton,
+#btnCancel {
     padding: 10px;
-    background-color: #2563EB;
     border: none;
-    border-radius: 20px;
+    background: transparent;
+    background-color: #252d48;
     color: white;
-    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 10px;
 }
 
-.planned-expense {
-    margin: 20px 0;
+/*POPUP DE GASTO CRIADO*/
+#cardDiv {
+    background-color: #1e293b;
+    padding: 24px;
+    border-radius: 8px;
+    width: 200px;
+    margin-left: 50px;
 }
 
-.planned-expense p {
-    margin-bottom: 4px;
+#contentitens {
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#btnAdcGasto {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: #515d5e;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
 }
